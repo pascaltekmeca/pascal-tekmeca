@@ -1,0 +1,25 @@
+<body>
+<img id="Rotating" border="0"></img>
+<script language="JavaScript">
+  
+   function RotateImages(Start)
+  {
+      var a = new Array("./images/logo.png","./images/slogan.png");
+      var b = document.getElementById('Rotating');
+	  
+      if(Start >= a.length)
+	  {
+		  Start=0;
+	  }
+	  b.src = a[Start];  
+		 // b.src = "./images/slogan.png";
+	 
+	  
+      window.setTimeout("RotateImages(" + (Start+1) + ")", 10000);
+  }
+  
+  RotateImages(0);
+  
+  </script>
+
+</body>
